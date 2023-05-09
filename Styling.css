@@ -1,0 +1,32 @@
+
+body{
+    margin:0;
+}
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+                "header header header header"
+                "main main main main"
+                "footer footer footer footer";
+
+}
+header{
+    grid-area: header;
+    background-color: black;
+}
+main{
+    grid-area: main;
+    background-color: aqua;
+}
+footer{
+    grid-area: footer;
+    background-color: blue;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
