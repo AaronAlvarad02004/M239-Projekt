@@ -36,12 +36,132 @@ header{
 }
 .hed a{
   text-decoration: none;
+  font-style: italic;
   font-size: 150%;
+}
+.hed a:hover{
+  font-size: 200%;
 }
 main{
     grid-area: main;
     background-color: #0C0345;
 }
+/* Kontakt */
+
+.Kontakt{
+  position: absolute;
+  z-index: 1;
+  border: 1x red solid;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.info_kontakt{
+  width: 30%;
+  height: 75vh;
+  background-color: #727272;
+  margin-top: 1%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  
+}
+.formular_kontakt{
+width: 50%;
+height: 75vh;
+margin-top:1% ;
+background-color: #727272;
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+grid-template-rows: 25% 25% 50%;
+grid-template-areas:
+            "firstname firstname lastname lastname"
+            "telnum telnum  mail mail"
+            "description  description description confirm";
+}
+.firstname{
+  grid-area: firstname;
+}
+.lastname{
+  grid-area:lastname ;
+}
+.telnum{
+  grid-area: telnum;
+}
+.mail{
+  grid-area: mail;
+}
+.description{
+  grid-area: description;
+}
+.confirm{
+  grid-area:confirm ;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.confirm button{
+  border-radius: 10%;
+  border: 0;
+}
+div input{
+  background-color: #D9D9D9;
+}
+.kontak_input h3{
+  color: white;
+
+}
+.kontak_input{
+  padding-left: 2%;
+}
+.kontak_input input{
+  height: 30%;
+  width: 80%;
+  border: 0;
+  margin-top: -3%;
+}
+.description textarea{
+  background-color: #D9D9D9;
+  width: 45vw;
+  height: 60%;
+}
+.info_kontakt p {
+  color: white;
+  font-size: 100%;
+}
+.info_kontakt ul li {
+  color: white;
+  font-size: 100%;
+}
+.info_kontakt ul{
+padding: 0;
+list-style-type: none;
+}
+.social_media{
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.info_kontakt .instagramm{
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  border-radius: 30%;
+}
+.info_kontakt .twitter{
+  background-color: #1D9BF0;
+  border-radius: 30%;
+}
+.info_kontakt .tiktok{
+  background-color: black;
+  border-radius: 30%;
+}
+/* Kontakt ende */
 footer{
     grid-area: footer;
     background-color:#000000;
@@ -82,10 +202,11 @@ a{
   }
   .Home-Mobile a{
     font-size: 150%;
+    font-style: italic;
     text-decoration: none;
   }
   .Home-Mobile a:hover{
-    background-color: blue;
+    font-size: 200%;
   }
   
   header{
@@ -112,7 +233,7 @@ a{
     height: 5px;
     background-color: white;
     margin: 6px 0px;
-    transform: 0.4s;
+    transform: 0.4s; 
     }
     .hamburger.is-active::before{ 
       transform: rotate(-45deg) translate(-8px, 6px);
@@ -135,16 +256,19 @@ a{
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        position: absolute;
+        z-index: 2;
     
       }
       .mobile-nav a{
         display: block;
         color: white;
         text-decoration: none;
-        font-size: 130%;
+        font-size: 150%;
+        font-style: italic;
       }
       .mobile-nav a:hover{
-        background-color: blue;
+        font-size: 200%;
       }
     }
   
@@ -153,7 +277,32 @@ a{
   .fitem2{
     flex-wrap: wrap;
   }
+  /* Kontakt */
+  .Kontakt{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .info_kontakt{
+    width: 90vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  
+  }
+  .formular_kontakt{
+    margin-top: 5%;
+    width: 90vw;
+    height: 50vh;
+  
+  }
+  .description textarea{
+    background-color: #D9D9D9;
+    width: 80vw;
+    height: 60%;
 
+  }
 
-
+  /* Kontakt ende */
 }
