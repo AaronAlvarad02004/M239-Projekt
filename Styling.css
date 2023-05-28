@@ -1,18 +1,21 @@
 
 /* Basic Structure for every site */
-body{
-    margin:0;
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0C0345;
 }
-.grid-container {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4,25%);
-    grid-template-rows: 10% 80% 10%;
-    grid-template-areas: 
-                "header header header header"
-                "main main main main"
-                "footer footer footer footer";}
+h1,h2,h3{
+  color: white;
+}
+p{
+  color: white;
+}
+li{
+color: white;
+}
 .mobile-nav{
   display: none;
 }
@@ -27,6 +30,7 @@ header{
     justify-content: start;
     justify-content: space-around;
     align-items: end;
+    height: 8vh;
 }
 .hed{
   width: fit-content;
@@ -43,17 +47,13 @@ header{
   font-size: 200%;
 }
 main{
-    grid-area: main;
     background-color: #0C0345;
+    flex-grow: 1;
+
 }
 /* Kontakt */
-
 .Kontakt{
-  position: absolute;
-  z-index: 1;
-  border: 1x red solid;
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -61,8 +61,7 @@ main{
   width: 30%;
   height: 75vh;
   background-color: #727272;
-  margin-top: 1%;
-  margin-left: 0;
+  margin-top: 3%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -72,7 +71,7 @@ main{
 .formular_kontakt{
 width: 50%;
 height: 75vh;
-margin-top:1% ;
+margin-top:3% ;
 background-color: #727272;
 display: grid;
 grid-template-columns: 25% 25% 25% 25%;
@@ -106,12 +105,14 @@ grid-template-areas:
 .confirm button{
   border-radius: 10%;
   border: 0;
+  height: 10%;
 }
 div input{
   background-color: #D9D9D9;
 }
 .kontak_input h3{
   color: white;
+  font-size: 120%;
 
 }
 .kontak_input{
@@ -130,11 +131,11 @@ div input{
 }
 .info_kontakt p {
   color: white;
-  font-size: 100%;
+  font-size: 120%
 }
 .info_kontakt ul li {
   color: white;
-  font-size: 100%;
+  font-size: 120%;
 }
 .info_kontakt ul{
 padding: 0;
@@ -161,15 +162,76 @@ list-style-type: none;
   background-color: black;
   border-radius: 30%;
 }
+
+
 /* Kontakt ende */
+/* Über mich*/
+
+.ubermich_first img{
+  width: 20%;
+  height: auto;
+  scale: (50% 50%);
+}
+.ubermich_first{
+  display: flex;
+}
+.ubermich_first .Einleitung{
+  width: 50vw;
+  margin-left: 23%;
+  margin-right: 25%;
+  position: relative;
+}
+.Einleitung h1{
+  padding-left: 25%;
+}
+.ubermich_second{
+  display: flex;
+  justify-content: space-evenly;
+}
+.ubermich{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Einleitung h1,p,ul{
+  color: white;
+}
+/*Über mich ende*/
+/* Portfolio */
+.portfolio{
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(3/(100%/3));
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "pictureleft centercontext pictureright"
+                        "pictureleft centercontext pictureright";
+}
+.rightpictures{
+  grid-area: pictureright;
+}
+.leftpictures{
+  grid-area: pictureleft;
+
+}
+.centertext{
+  grid-area: centercontext;
+  text-align: center;
+}
+.leftpictures img{
+ width: 100%;
+}
+.rightpictures img{
+  width: 100%;
+}
+
+/* Portfolio ende */
 footer{
-    grid-area: footer;
     background-color:#000000;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     justify-content: space-around;
-    
+    margin-top: auto;
 }
 .fitem1{
     color: white;
@@ -258,7 +320,6 @@ a{
         justify-content: space-evenly;
         position: absolute;
         z-index: 2;
-    
       }
       .mobile-nav a{
         display: block;
@@ -270,6 +331,27 @@ a{
       .mobile-nav a:hover{
         font-size: 200%;
       }
+      .Kontakt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+        .info_kontakt{
+          width: 90% !important;
+          height: 50% !important; 
+          margin-top: 1% !important;
+          
+               
+        }
+        .formular_kontakt{
+          width: 90% !important;
+          height: 50% !important;
+          margin-bottom: 1% !important;
+        }
+        .kontak_input textarea{
+          width: 100% !important;
+        }
     }
   
 @media only screen and (max-width: 1050px)
@@ -278,31 +360,74 @@ a{
     flex-wrap: wrap;
   }
   /* Kontakt */
-  .Kontakt{
-    display: flex;
-    flex-wrap: wrap;
+  .formular_kontakt{
+    width: 65vw;
+    height: 75vh;
+    margin-top: 4%;
   }
   .info_kontakt{
-    width: 90vw;
-    height: 20vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  
+    width: 33%;
+    margin-top: 4%;
   }
-  .formular_kontakt{
-    margin-top: 5%;
-    width: 90vw;
-    height: 50vh;
-  
+  .kontak_input input{
+    width: 90%;
   }
   .description textarea{
     background-color: #D9D9D9;
-    width: 80vw;
-    height: 60%;
+    width: 55vw;
+    height: 50%;
+    margin-bottom: 3%;
+  }
+  .social_media{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .info_kontakt p {
+    font-size: 100%;
+  }
+  .info_kontakt ul li {
+    font-size: 100%;
+  }
+  /* Kontakt ende */
+  /* Portfolio */
+  .portfolio{
+    display: flex;
+    flex-direction: column;
+  }
+  .leftpictures img{
+    width: 100%;
+   }
+   .rightpictures img{
+     width: 80%;
+   }
+   .leftpictures{
+    margin-left: 20%;
+    margin-right: 20%;
+   }
+   .rightpictures{
+    margin-left: 20%;
+    margin-left: 20%;
+   }
+  /* Portfolio ende */
+  /* Über mich */
+  .ubermich{
+    display: flex;
+    flex-direction: column;
 
   }
-
-  /* Kontakt ende */
+  .ubermich_first{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .ubermich_second{
+    display: flex;
+    flex-direction: column;
+  }
+  .ubermich_first img{
+    width: 50%;
+  }
+  /* Über mich ende */
 }
