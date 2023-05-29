@@ -165,6 +165,17 @@ list-style-type: none;
 
 
 /* Kontakt ende */
+.Startseite{
+  display: flex;
+  justify-content: space-evenly;
+}
+.Video video{
+  width: 420px;
+  height: 420px;
+}
+.Welcome{
+  margin-top: 5%;
+}
 /* Über mich*/
 
 .ubermich_first img{
@@ -174,6 +185,7 @@ list-style-type: none;
 }
 .ubermich_first{
   display: flex;
+margin: 5%;
 }
 .ubermich_first .Einleitung{
   width: 50vw;
@@ -192,6 +204,7 @@ list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: space-evenly;
 }
 .Einleitung h1,p,ul{
   color: white;
@@ -208,23 +221,79 @@ list-style-type: none;
 }
 .rightpictures{
   grid-area: pictureright;
+
 }
 .leftpictures{
   grid-area: pictureleft;
-
+  margin-left: 4%;
 }
 .centertext{
   grid-area: centercontext;
   text-align: center;
 }
-.leftpictures img{
- width: 100%;
-}
-.rightpictures img{
-  width: 100%;
+.portfolio div img{
+  width: 40vw;
 }
 
 /* Portfolio ende */
+/* Fägikeiten */
+.Fähigkeiten{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3/(100%/3));
+  grid-template-rows: repeat(3/100%/3);
+  grid-template-areas: "Programmieren Server Database"
+                        "office Fähigkeiten computer"
+                        "Netzwerk Website Script" ;          
+}
+.Programmieren{
+grid-area: Programmieren;
+}
+.Datenbank{
+  grid-area: Database;
+}
+.fähigkeit{
+  grid-area: Fähigkeiten;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Netzwerk{
+  grid-area: Netzwerk;
+}
+.Script{
+  grid-area: Script;
+}
+.office{
+  grid-area: office;
+}
+.server{
+  grid-area: Server;
+}
+.computer{
+  grid-area: computer;
+}
+.website{
+  grid-area: Website;
+}
+.Fähigkeiten div ul{
+  list-style-type: none;
+  padding: 0;
+}
+.Fähigkeiten div{
+  width: 50%;
+  height: auto;
+  background-color: #2E627F;
+  border: blue 2px solid;
+  text-align: center;
+  margin-left: 22%;
+  margin-top: 4%;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  
+}
+/* Fähikeiten ende */
 footer{
     background-color:#000000;
     display: flex;
@@ -400,7 +469,7 @@ a{
     width: 100%;
    }
    .rightpictures img{
-     width: 80%;
+     width: 100%;
    }
    .leftpictures{
     margin-left: 20%;
@@ -430,4 +499,31 @@ a{
     width: 50%;
   }
   /* Über mich ende */
+  /* Fähigkeiten */
+  .Fähigkeiten{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Fähigkeiten div{
+    margin: 0;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  /* Fähikeiten ende */
+  .Welcome{
+    margin-left: 5%;
+  }
+  .Startseite{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:center ;
+  }
+  .Video{
+    margin-left: 5%;
+  }
+  .Video video{
+    width: 90%;
+  
+  }
 }
